@@ -1,0 +1,63 @@
+{
+  "name": "acciyo-backend",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "@braintree/sanitize-url": "^3.1.0",
+    "@sailshq/lodash": "^3.10.3",
+    "aws-sdk": "^2.368.0",
+    "axios": "^0.18.1",
+    "bull": "^3.13.0",
+    "dotenv": "^6.1.0",
+    "full-name-splitter": "^1.1.1",
+    "jsonwebtoken": "^8.4.0",
+    "metascraper": "^4.7.0",
+    "metascraper-publisher": "^4.7.0",
+    "newrelic": "^5.10.0",
+    "redis": "^3.0.2",
+    "request": "^2.88.0",
+    "sails": "^1.2.4",
+    "sails-hook-orm": "^2.1.1",
+    "sails-hook-sockets": "^1.5.5",
+    "sails-postgresql": "^1.0.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@sailshq/eslint": "^4.19.3",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.15.3",
+    "should": "^13.2.3"
+  },
+  "scripts": {
+    "start:dev": "node app.js",
+    "start": "node app.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "mocha ./test/**/*.js"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vipin/acciyo-backend.git"
+  },
+  "author": "vipin",
+  "license": "",
+  "engines": {
+    "node": "11.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
