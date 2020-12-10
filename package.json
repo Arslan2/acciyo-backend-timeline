@@ -18,7 +18,7 @@
     "newrelic": "^5.10.0",
     "redis": "^3.0.2",
     "request": "^2.88.0",
-    "sails": "^1.2.4",
+    "sails": "^1.4.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^1.5.5",
     "sails-postgresql": "^1.0.2",

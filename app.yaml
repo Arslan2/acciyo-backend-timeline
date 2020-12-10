@@ -1,6 +1,8 @@
-service: acciyo-timeline-app
+service: acciyo-backend-timeline
 runtime: nodejs
 env: flex
 automatic_scaling:
   min_num_instances: 1
   max_num_instances: 7
+beta_settings:
+  cloud_sql_instances: ornate-fragment-284100:us-central1:acciyo-prod

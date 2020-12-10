@@ -19,7 +19,7 @@
  * https://sailsjs.com/docs/concepts/deployment
  */
 
-const DB_HOST = 'acciyo-prod.czfr9xpcpcx7.us-east-1.rds.amazonaws.com';
+const DB_HOST = '35.223.116.17';
 const DB_NAME = 'acciyo';
 const DB_USERNAME = 'acciyomaster';
 const DB_PASSWORD = 'zYPKOsANwz56';
@@ -50,7 +50,8 @@ module.exports = {
      ***************************************************************************/
     default: {
       adapter: 'sails-postgresql',
-      url: `postgresql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT || 5432}/${DB_NAME}`
+      url: `postgresql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT || 5432}/${DB_NAME}`,
+      ssl: true
       // adapter: 'sails-mysql',
       // url: 'mysql://user:password@host:port/database',
       //--------------------------------------------------------------------------
